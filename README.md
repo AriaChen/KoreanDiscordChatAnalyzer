@@ -1,9 +1,7 @@
-# BeartownDiscordTrendsAnalyzer
+# KoreanDiscordChatAnalyzer
 ## Project Overview
 
-BeartownDiscordTrendsAnalyzer project is focused on analyzing player feedback from the Korean Minecraft Server - Beartown (beartown.kr) Discord gaming community. The goal is to mine player suggestions to uncover trends, extract key phrases, and perform cluster analyses. These insights are pivotal in understanding player needs and enhancing game development and community engagement.
-
-Join us in the Beartown Discord community to discuss the game, provide feedback, or get support. Click here to join: https://discord.com/invite/beartown.
+The KoreanDiscordChatAnalyzer is an NLP-based project aimed at analyzing chat data from public Korean Discord communities. The goal is to extract meaningful trends, sentiments, and key phrases from chat conversations to gain insights into community dynamics, interests, and feedback. It can serve as a resource for community managers, game developers, and researchers interested in understanding the social interactions and preferences within these digital spaces.
 
 ## Getting Started
 
@@ -32,6 +30,12 @@ Example
 - [ ] Visualize the analysis results
 - [ ] Build a web interface to display insights
 - [ ] Add tests to ensure reliability
+
+## Data Privacy and Ethics
+
+- **Public Data Only**: The analysis is performed exclusively on publicly available chat data. No private conversations or personal data are used.
+- **Anonymization**: All data used in the project is anonymized to ensure individual privacy is maintained.
+- **Ethical Considerations**: The project adheres to ethical guidelines for data usage and analysis, ensuring no community or individual is targeted or negatively impacted.
 
 ## License
 
