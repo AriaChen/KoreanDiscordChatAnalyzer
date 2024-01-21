@@ -8,7 +8,7 @@ The KoreanDiscordChatAnalyzer is an NLP-based project aimed at analyzing chat da
 ### Data Collection
 
 * **Prerequisite**: A Discord Bot is required for data collection. To create a Discord bot and obtain a bot token, follow this follow this [tutorial](https://hackernoon.com/creating-a-python-discord-bot-how-to-get-data-for-analysis).
-* The `data_collection/discord_data_collector.py` script uses a Discord bot (coded in Python) to gather chat data from a specific channel in a Korean Discord community. Configured with necessary permissions, the bot asynchronously fetches up to 100,000 messages (or change to any numbers you need), focusing on content, author, and timestamps. Timestamps are converted from UTC to Korea Standard Time. The collected data is then stored as a CSV file for further processing.
+* The `data_collection/discord_data_collector.py` script utilizes a Discord bot to gather chat data from a specified channel in a Korean Discord community. Configured with necessary permissions, the bot fetches and stores up to 100,000 messages (or change to any numbers you need) as a CSV file, focusing on text content, author, and timestamps. Timestamps are converted from UTC to Korea Standard Time.
 
 ### Data Cleaning
 
