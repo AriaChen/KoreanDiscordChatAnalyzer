@@ -9,7 +9,7 @@ Join us in the Beartown Discord community to discuss the game, provide feedback,
 
 ### Prerequisites
 
-To fill in later:
+* Discord Bot: You need to create a Discord bot and obtain a bot token for data collection.
 
 ```
 Example
@@ -25,7 +25,7 @@ Example
 
 ## Roadmap
 
-- [ ] Collect data from Discord
+- [x] Collect data from Discord
   
 - [ ] Clean and process the collected text
 - [ ] Perform core data analysis

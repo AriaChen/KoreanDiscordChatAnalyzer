@@ -16,16 +16,21 @@ client = discord.Client(intents=intents)
 
 
 async def fetch_messages(channel):
-    async for message in channel.history(limit=3):  # Fetch the last three messages
-        utc_time = message.created_at
-        # Change to Korea time zone
-        local_time = utc_time.replace(tzinfo=pytz.utc).astimezone(pytz.timezone("Asia/Seoul"))
-        content = message.content
-        if message.attachments:
-            content += " [Attachments: " + ", ".join(attachment.url for attachment in message.attachments) + "]"
-        if message.embeds:
-            content += " [Embeds provided]"
-        print(f"{local_time} - {message.author}: {content}")
+    messages = []
+
+    async for message in channel.history(limit=100000):
+        if not message.content:  # Skip empty messages
+            continue
+
+        # Convert UTC to Korea time zone
+        local_time = message.created_at.replace(tzinfo=pytz.utc).astimezone(pytz.timezone("Asia/Seoul"))
+        formatted_time = local_time.strftime("%Y-%m-%d %H:%M:%S")
+
+        messages.append([formatted_time, str(message.author), message.content])
+
+    # Create a DataFrame and save to CSV
+    df = pd.DataFrame(messages, columns=['Timestamp', 'Author', 'Content'])
+    df.to_csv('../data/chat_data.csv', index=False, encoding='utf-8-sig')
 
 
 @client.event
