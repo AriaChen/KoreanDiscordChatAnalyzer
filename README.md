@@ -25,12 +25,13 @@ Example
 
 ## Roadmap
 
-- [ ]  Collect data from Discord
-- [ ]  Clean and process the collected text
-- [ ]  Perform core data analysis
-- [ ]  Visualize the analysis results
-- [ ]  Build a web interface to display insights
-- [ ]  Add tests to ensure reliability
+- [ ] Collect data from Discord
+  
+- [ ] Clean and process the collected text
+- [ ] Perform core data analysis
+- [ ] Visualize the analysis results
+- [ ] Build a web interface to display insights
+- [ ] Add tests to ensure reliability
 
 ## License
 
