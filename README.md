@@ -12,17 +12,21 @@ The KoreanDiscordChatAnalyzer is an NLP-based project aimed at analyzing chat da
 
 ### Data Cleaning
 
-To fill in later:
+Performs the following operations:
 
-```
-Example
-```
+* Retention of only specified characters such as Korean, English, specific special characters, and emojis.
+* Removal of URLs and Discord-specific markup (like user mentions and custom emojis).
+* Normalization of repeated sequences to a maximum of three repetitions.
+* Trimming whitespace.
+* Removal of lines that are empty, contain only whitespace, or consist solely of punctuation, Korean punctuation, or numbers.
+
+
 
 ## Roadmap
 
 - [x] Collect data from Discord
   
-- [ ] Clean and process the collected text
+- [x] Clean and process the collected text
 - [ ] Perform core data analysis
 - [ ] Visualize the analysis results
 - [ ] Build a web interface to display insights
