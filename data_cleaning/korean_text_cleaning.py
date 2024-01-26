@@ -41,6 +41,7 @@ def is_valid_content(content):
     Determines if the content is invalid according to the rules provided:
     - Is empty or contains only whitespace.
     - Contains only punctuation, Korean punctuation, or numbers.
+    - Contains only one or two English characters.
 
     Parameters:
     - content: The text line to be evaluated for validity.
@@ -53,8 +54,12 @@ def is_valid_content(content):
         return False
 
     # Regular expression to match only punctuation, Korean punctuation, or numbers
-    pattern = re.compile(r'^[.,!?;:()\-\'\"/\\ㄱ-ㅎㅏ-ㅣ0-9\s]+$')
+    pattern = re.compile(r'^[.,!?;:()`~\-\'\"/\\ㄱ-ㅎㅏ-ㅣ0-9\s]+$')
     if pattern.match(str(content)):
+        return False
+
+    # Check for content with only one or two English letters
+    if re.fullmatch(r'[A-Za-z]{1,2}', content.strip()):
         return False
 
     return True

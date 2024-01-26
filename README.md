@@ -18,7 +18,7 @@ Performs the following operations:
 * Removal of URLs and Discord-specific markup (like user mentions and custom emojis).
 * Normalization of repeated sequences to a maximum of three repetitions.
 * Trimming whitespace.
-* Removal of lines that are empty, contain only whitespace, or consist solely of punctuation, Korean punctuation, or numbers.
+* Removal of lines that are empty, contain only whitespace, or consist solely of punctuation, Korean punctuation, numbers, or one to two English characters.
 
 
 
