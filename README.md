@@ -20,16 +20,47 @@ Performs the following operations:
 * Trimming whitespace.
 * Removal of lines that are empty, contain only whitespace, or consist solely of punctuation, Korean punctuation, numbers, or one to two English characters.
 
+### Analysis
 
+#### Chat Frequency over Time
+
+Identify patterns in chat activity over time to understand peak activity periods and any noticeable trends.
+
+* Use the timestamps in the collected data to aggregate message counts on a daily / weekly / monthly basis. 
+* Plot these counts in a time series graph to visualize the chat activity over time.
+
+#### (Monthly) Most Active Users 
+
+Recognize the most active community members on a monthly basis to potentially reward engagement or identify key influencers. 
+
+* Summarize the number of messages per user for each month. 
+* Rank users by their message count to find the top contributors.
+
+#### (Monthly) Term Frequency
+
+Analyze the most frequently used terms or words in the community chats to gauge the prevalent topics or interests.
+
+* Tokenize the chat messages into words, remove common stopwords, and count the frequency of each term on a monthly basis.
+* Plot the terms in a bar chart or a word cloud.
+
+#### Sentiment Analysis
+
+Assess the general sentiment (positive, negative, neutral) of the community chats to understand the overall mood or response to certain topics or events.
+
+* Apply sentiment analysis on the text content of messages using pre-trained models,  e.g. https://huggingface.co/WhitePeak/bert-base-cased-Korean-sentiment
+
+#### Topic Modeling
+
+Uncover underlying topics in the chat messages to identify key themes or subjects of interest within the community.
+
+* Use topic modeling algorithms like Latent Dirichlet Allocation (LDA) to extract topics from the collection of text data.
 
 ## Roadmap
 
 - [x] Collect data from Discord
-  
 - [x] Clean and process the collected text
 - [ ] Perform core data analysis
-- [ ] Visualize the analysis results
-- [ ] Build a web interface to display insights
+- [ ] Build a web interface to visualize insights
 - [ ] Add tests to ensure reliability
 
 ## Data Privacy and Ethics
